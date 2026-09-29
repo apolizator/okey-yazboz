@@ -1,0 +1,182 @@
+# ============================================================
+#  ŞABAN ABİ OKEY 101 — SESLİ METİN ŞABLONU
+# ============================================================
+#
+#  * Her [BASLIK] bir senaryodur. HER SATIR ayrı bir varyasyondur,
+#    o an gelince biri RASTGELE seçilip sesli okunur.
+#  * "#" ile başlayan satır yorumdur, okunmaz.
+#  * Boş bırakırsan o senaryoda ses çıkmaz.
+#
+#  DEĞİŞKENLER:
+#    {oyuncu}  -> işlemi yapan oyuncu
+#    {hedef}   -> cezayı yiyen (taşı atan) oyuncu  (yandan alınca)
+#    {tas}     -> alınan/atılan taşın sayısı
+#    {ceza}    -> hesaplanan ceza
+#    {kat}     -> çarpan (10 / 20)
+#    {sayi}    -> açılan düz puanı veya çift adedi
+#    {el}      -> kaçıncı tur
+#    {takim}   -> kazanan takım
+#    {fark}    -> puan farkı
+#    {sure}    -> süre
+#
+# ============================================================
+
+# ----- OYUN / TUR AKIŞI -----
+
+[OYUN_BASLADI]
+Hadi bakalım sazanlar, taşlar açıldı. Kimin cebi boşalacak göreceğiz.
+Yine toplandık sığır sürüsü! Oyun başladı, ağlamak yok.
+Oyun başladı. Körler sağırlar birbirini ağırlar, görelim bakalım.
+
+[EL_BASLADI]
+{el}. tur. Ahmak gibi oynamayın da biraz oyun görelim.
+{el}. ele geçtik. Öküz gibi trene bakar gibi taşlara bakmayın.
+Yeni tur, {el}. el. Şansa bala değil, aklınızla oynayın kaz kafalılar.
+
+[EL_BITTI]
+El bitti, {sure} sürdü. Kaz kafalılar yine zorlandı.
+Tamamdır, {el}. el kapandı. Düşünürken beyniniz yandı ahmaklar.
+Bu el de bitti. {sure} boyunca boş boş taş çektiniz sığırlar.
+
+# ----- AÇMA SENARYOLARI -----
+
+[DUZ_ACTI]
+{oyuncu} {sayi} ile düz açtı. Meczup bile bazen doğruyu bulur işte.
+{oyuncu} düz açtı. Helal lan kör yılan!
+Şaşırdım, {oyuncu} {sayi} ile açtı. Ahmak şansı dedikleri bu olsa gerek.
+
+[CIFT_ACTI]
+{oyuncu} çift açtı, {sayi} çift. Sazan gibi atlamadan önce iyi beklemiş çakal.
+{oyuncu} {sayi} çiftle açtı. Sonunda öküzün altında buzağı buldun ha?
+Çift geldi {oyuncu}'dan, {sayi} çift. Gözün açılmış kör fare.
+
+
+# ----- YANDAN TAŞ ALMA (HER SAYIYA ÖZEL) -----
+
+[YANDAN_ALIP_1]
+1 almaya utanmadın mı {oyuncu}? Fakir fukara gibi 1'e muhtaç kalmış şebek!
+Lan 1 numaralı taşı aldın, bari büyük bir şey alaydın ahmak {oyuncu}!
+{hedef} elindeki en ezik taşı attı, {oyuncu} sazan gibi 1'e atladı. Fakir köpekler!
+Yerden 1 çaldı sığır {oyuncu}. 1 alıp açmak nedir la fakir köpek!
+
+[YANDAN_ALIP_2]
+{hedef} 2 attı, {oyuncu} sazan gibi kaptı. 2 numarayı da almazsın be ahmak!
+2'yi gördü dayanamadı şebek {oyuncu}. {hedef} sağ olsun seni doyuruyor!
+
+[YANDAN_ALIP_3]
+Al sana 3'ün biri {hedef}! {oyuncu} 3'ü aldı sana fena monte etti.
+{hedef} 3 attı, {oyuncu} havada kaptı. Al sana {ceza} ceza kaz kafalı!
+
+[YANDAN_ALIP_4]
+4 ayak üstüne düştün keriz {oyuncu}. {hedef} sayesinde eli açtın sığır!
+{hedef} 4'ü verdi, {oyuncu} yedi bitirdi. {ceza} ceza yazın şu ahmağın hesabına.
+
+[YANDAN_ALIP_5]
+5 kardeş gibi yapıştırdı suratına {hedef}! {oyuncu} 5'i aldı {ceza} cezayı sana kitledi.
+{hedef} salak gibi 5'i verdi. {oyuncu} affeder mi, anında soktu!
+
+[YANDAN_ALIP_6]
+{hedef} 6 attı, {oyuncu} altı okka yaptı sana! {ceza} cezayı ye de aklın başına gelsin.
+6'yı verdin sığır {hedef}, {oyuncu} de böyle alır ağzına tıkar işte!
+
+[YANDAN_ALIP_7]
+7 numara şans getirmez sana ahmak {hedef}! {oyuncu} 7'yi aldı seni batırdı.
+Yedi numara boru değil {hedef}! {oyuncu} 7'yi sana fena yedirdi, {ceza} ceza!
+
+[YANDAN_ALIP_8]
+8 numarayı attı sığır {hedef}. {oyuncu} o 8'i aldı kafana çaktı kaz kafalı!
+Oha 8 yenir mi lan {hedef}? {oyuncu} 8'i aldı, {ceza} ceza ile seni şebek etti!
+
+[YANDAN_ALIP_9]
+9 numarayı verdin, 9 doğurdun {hedef}! {oyuncu} aldı sana acımadı.
+Koca 9'u nasıl atarsın ahmak {hedef}! {oyuncu} {ceza} cezayı kitledi, otur ağla.
+
+[YANDAN_ALIP_10]
+10 numara 5 yıldız soktu {oyuncu} sana {hedef}! Hayvan gibi {tas} atılır mı lan?
+Koca 10'luyu attı sığır {hedef}. {oyuncu} de o 10'luyu aldı, helal olsun!
+
+[YANDAN_ALIP_11]
+11 numara beton gibi oturdu mu {hedef}? {oyuncu} koca 11'i yuttu seni de batırdı.
+Lan 11 atılır mı öküz {hedef}! {oyuncu} o taşı sana fena monte etti, {ceza} ceza!
+
+[YANDAN_ALIP_12]
+12 numarayı attın ya {hedef}, harbi körsün! {oyuncu} 12'yi aldı, boğazına dizdi.
+Koca 12 numaralı odunu yedin {hedef}! {oyuncu} sana {ceza} cezayı çaktı şebek.
+
+[YANDAN_ALIP_13]
+Ühhh eşşeğe bak, koca 13 alınır mı lan! {oyuncu} böyle sokar ağzına işte {hedef}!
+Oha 13 attı sığır {hedef}! {oyuncu} o 13'ü aldı boğazına dizdi senin!
+13 numarayı verdin ya {hedef}, harbi körsün oğlum! {oyuncu} fena soktu sana fena!
+Koca 13'ü yedin {hedef}, boğazında kalsın öküz!
+
+[YANDAN_ALIP_ACTI]
+{hedef} ahmak gibi {tas} attı, {oyuncu} kapıp soktu. {ceza} ceza {hedef}'in hanesine!
+Ulan öküz {hedef}, {tas} atılır mı? {oyuncu} çakalı aldı açtı, {ceza} yedin!
+
+# ----- BÜYÜK AÇILIŞ CEZALARI -----
+
+[DUZ_50_USTU]
+Oha! {oyuncu} {sayi} ile düz açtı, elli üstü! Karşıdaki kuzular yüz cezayı yedi.
+{oyuncu} acımadı, {sayi} düz ile vurdu geçti. Karşı takım şokta, tam yüz ceza.
+
+[CIFT_7_USTU]
+{oyuncu} {sayi} çift açtı, yedi üstü! Karşıdaki şebekler yüz ceza ile battı.
+Hayvan gibi oynadı {oyuncu}, {sayi} çift. Karşı taraf cüzdanı çıkarsın, yüz ceza geliyor.
+
+# ----- OKEY ALDI (açan, yerdeki okeyi aldı) -----
+
+[OKEY_ALDI]
+{oyuncu}, {hedef} denilen ahmakın attığı okeyi kaptı! {hedef} 100 ceza yedi.
+Bak şu köre, {hedef} okeyi attı, {oyuncu} çakal gibi kaptı. 100 ceza {hedef}'in hanesine!
+{hedef} okeyi attı resmen kör gibi. {oyuncu} bedavaya aldı, 100 ceza sığırın defterine yazıldı.
+
+# ----- KENDİ HATALARI -----
+
+[OKEY_ATTI]
+{oyuncu} okeyi attı gitti! Ahmak mısın oğlum sen? Kendine yüz ceza.
+Kör müsün lan {oyuncu}? Okey çöpe gitti, yüz ceza yedin, tam bir sığırsın.
+{oyuncu} meczup gibi okeyi elinden kaçırdı. Al sana yüz ceza kaz kafalı.
+
+[YANLIS_ACTI]
+{oyuncu} yanlış açtı! Saymayı da bilmiyor sığır. Yüz ceza!
+Hahaha {oyuncu} eli yanlış açtı! Ahmak herif, al sana yüz ceza.
+{oyuncu} ben açtım derken elinde patladı. Kör müsün oğlum, yüz ceza yazın şuna.
+
+# ----- BİTİŞ SENARYOLARI -----
+
+[BITIS_KAFA]
+{oyuncu} KAFA ATTI! Karşıdaki kuzular sekiz yüz cezayı yedi, meleyin bakayım!
+Kafa geldi {oyuncu}'dan! Karşıdaki ahmaklar sekiz yüz yedi, gülmekten öldüm.
+{oyuncu} kafadan bitirdi! Karşıdaki sığırlar bu rezilliği unutmaz, sekiz yüz ceza.
+
+[BITIS_NORMAL]
+{oyuncu} normal bitti. Zar zor kapattı eli kaz kafalı.
+{oyuncu} eli kapattı. Sonunda taş dizmeyi öğrendin ahmak.
+Bitti diyor {oyuncu}. Şansa bala bitiyorsun şebek.
+
+[BITIS_OKEY]
+{oyuncu} okeyle bitti! Karşıdaki şebekler iki katı ceza yedi!
+Okeyden bitirdi {oyuncu}! Karşıdaki ahmaklar iki kat ceza yedi, batıksınız oğlum.
+{oyuncu} okeyi kafanıza vurdu. Karşı taraf iki kat yedi, ağlayın sığırlar.
+
+[BITIS_CIFTE_OKEY]
+{oyuncu} ÇİFTE OKEY attı! Karşı taraf dört kat yedi, eşek gibi anırın şimdi!
+Çifte okey! {oyuncu} masayı darmadağın etti. Karşıdaki öküzler dört kat ceza yedi.
+{oyuncu} çifte okeyle bitirdi! Dört kat ceza, karşı takım bu masadan kalkamaz ahmaklar!
+
+# ----- ÖZEL ANLAR -----
+
+[PUAN_ACIKLANDI]
+Puanlar açıldı! Aradaki fark {fark}. Hangi tarafın sığır olduğu belli oldu.
+İşte gerçekler! Fark {fark} puan. Öndeki çakallar sevinsin, gerideki ahmaklar utansın.
+Son el! Fark {fark}. Şimdi terleme başlasın bakalım kaz kafalılar.
+
+[GERI_ALINDI]
+Geri alındı. Elin mi titredi kör herif?
+Hop, geri sardık. Ne yaptığını sen de bilmiyorsun meczup.
+Geri alındı. Düzgün gir şu sayıyı ahmak.
+
+[OYUN_BITTI]
+Oyun bitti! Kazanan {takim}. Süre {sure}. Kaybeden sığırlar hesabı ödesin.
+Tamamdır, {takim} kazandı! {sure} sürdü. Kaybeden ahmaklar ayağa kalksın.
+Bitti bu iş! {takim} aldı götürdü. Diğerleri köşede ağlasın kaz kafalılar.
